@@ -40,4 +40,9 @@ public class EmployeeController {
 		employeeservice.updateEmployeeSalary(id,salary);
 	}
 
+	@DeleteMapping(path = "{id}")
+	public void deleteEmployeeById(@PathVariable("id") Integer id){
+		employeeservice.deleteEmployeeById(id);
+	}
+
 }

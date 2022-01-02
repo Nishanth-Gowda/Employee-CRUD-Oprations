@@ -47,4 +47,9 @@ public class EmployeeService {
 	public List<Employee> getEmployeeByAsc() {
 		return employeerepository.findAll(Sort.by(Sort.Direction.ASC, "name"));
 	}
+
+	public void deleteEmployeeById(Integer id) {
+		Employee employee = employeerepository.findEmployeeById(id).orElseThrow(() -> new IllegalArgumentException("Employee with id"+id+ "does not exist"));
+		employeerepository.deleteById(id);
+	}
 }
