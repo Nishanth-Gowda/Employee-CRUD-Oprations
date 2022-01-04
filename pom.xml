@@ -45,6 +45,7 @@
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
 		</plugins>
+		<finalName>Git-Jenkins-Integration</finalName>
 	</build>
 
 </project>
